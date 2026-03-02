@@ -1,0 +1,53 @@
+# LAB 01 – Initial Deployment & Hardening
+
+1. Objective
+Deploy and secure DrayTek Vigor2925Fn after firmware upgrade.
+
+---
+
+2. Firmware Upgrade
+Previous version: 3.8.9.5
+New version: 3.9.8.6
+Upgrade method: Web Firmware Upgrade
+Result: success
+
+---
+
+3. Factory Reset
+Reason: Reset to clean baseline after firmware update.
+Result: Success.
+
+---
+
+4. Security Hardening
+Management Access
+- HTTPS only enabled
+- HTTP disabled
+- Telnet disabled
+- SSH LAN only
+- Auto logout: 5 minutes
+
+WAN Security
+- WAN ping disabled
+- Remote management disabled
+- UPnP disabled
+
+---
+
+5. Backup Baseline Configuration
+Backup location: Pham Minh Nhat's laptop
+Filename: V2925_20260302_DrayTek_3986.cfg
+Storage location: C:\Users\Pham Minh Nhat\Documents\Backup Draytek
+
+---
+
+6. Verification
+- Login test: PASS
+- WAN connectivity: PASS
+- Reboot persistence test: PASS
+
+---
+
+7. Lessons Learned
+- Firmware must match exact model
+- Web upgrade may fail if wrong build used
