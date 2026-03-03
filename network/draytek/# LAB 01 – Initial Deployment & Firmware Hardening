@@ -5,44 +5,55 @@ Deploy and secure DrayTek Vigor2925Fn after firmware upgrade.
 
 ---
 
-2. Firmware Upgrade
-Previous version: 3.8.9.5
-New version: 3.9.8.6
-Upgrade method: Web Firmware Upgrade
-Result: success
+2. Environment
+Device: DrayTek Vigor2925Fn
+Access method: LAN wired
+Upgrade date: 2026-03-02
 
 ---
 
-3. Factory Reset
+3. Firmware Upgrade
+Previous version: 3.8.9.5
+New version: 3.9.8.6
+Upgrade method: Web UI → System Maintenance → Firmware Upgrade
+Upgrade status: Success
+Reboot required: Yes
+
+---
+
+4. Factory Reset
 Reason: Reset to clean baseline after firmware update.
 Result: Success.
 
 ---
 
-4. Security Hardening
-Management Access
-- HTTPS only enabled
-- HTTP disabled
-- Telnet disabled
-- SSH LAN only
+5. Security Hardening
+Management Security
+- HTTPS only: Enabled
+- HTTP: Disabled
+- Telnet: Disabled
+- SSH: LAN only
 - Auto logout: 5 minutes
 
 WAN Security
-- WAN ping disabled
-- Remote management disabled
-- UPnP disabled
+- WAN ping: Disabled
+- Remote management: Disabled
+- UPnP: Disabled
 
 ---
 
-5. Backup Baseline Configuration
+6. Backup Baseline Configuration
 Backup location: Pham Minh Nhat's laptop
 Filename: V2925_20260302_DrayTek_3986.cfg
 Storage location: C:\Users\Pham Minh Nhat\Documents\Backup Draytek
+Backup verified: Yes (file integrity checked)
+Secondary backup: None
 
 ---
 
 6. Verification
 - Login test: PASS
+- SSH access (LAN): PASS
 - WAN connectivity: PASS
 - Reboot persistence test: PASS
 
