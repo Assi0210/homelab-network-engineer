@@ -11,8 +11,10 @@ This lab demonstrates how a host discovers the MAC address of its gateway before
 ## Network
 
 Ubuntu Server  
+
 IP: 10.10.30.5  
 Interface: enp3s0
+
 
 Gateway (pfSense OPT1)  
 IP: 10.10.30.1
@@ -23,11 +25,15 @@ IP: 10.10.30.1
 
 Command
 
+```
 ip neigh
+```
 
 Result
 
+```
 10.10.30.1 dev enp3s0 lladdr 60:be:b4:29:8c:90 REACHABLE
+```
 
 Explanation
 
@@ -39,11 +45,15 @@ Ubuntu already knows the MAC address of the gateway and stores it in the ARP cac
 
 Command
 
+```
 sudo ip neigh flush all
+```
 
 Check again
 
+```
 ip neigh
+```
 
 The ARP entry may appear again if the system communicates with the gateway.
 
@@ -53,15 +63,21 @@ The ARP entry may appear again if the system communicates with the gateway.
 
 Command
 
+```
 ping 10.10.30.1 -c 3
+```
 
 After ping, check ARP table again
 
+```
 ip neigh
+```
 
 Result
 
+```
 10.10.30.1 dev enp3s0 lladdr 60:be:b4:29:8c:90 REACHABLE
+```
 
 Explanation
 
@@ -76,9 +92,10 @@ pfSense replied with its MAC address.
 ## Step 4 - Check Local MAC Address
 
 Command
-
+```
 ip a
-
+```
+```
 Interface
 
 enp3s0
@@ -86,6 +103,7 @@ enp3s0
 MAC address
 
 00:60:72:30:31:99
+```
 
 ---
 
