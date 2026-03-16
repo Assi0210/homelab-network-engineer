@@ -31,20 +31,23 @@ pfSense
 ## Commands
 
 Check routing table
-
+```
 ip route
+```
 
 Add default gateway
-
+```
 sudo ip route add default via 10.10.30.1
+```
 
 Ping gateway
-
+```
 ping 10.10.30.1
-
+```
 Ping pfSense LAN
-
+```
 ping 10.10.20.1
+```
 
 ---
 
